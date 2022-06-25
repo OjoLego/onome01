@@ -3,18 +3,21 @@ package com.example.nomzy02
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import com.example.nomzy02.databinding.SplashBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var buttonGetStarted : Button
+    private lateinit var binding: SplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.splash)
+        binding = SplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        buttonGetStarted = findViewById(R.id.buttonGetStarted)
-        buttonGetStarted.setOnClickListener {
+        val actionBar = supportActionBar
+        actionBar!!.title = "GetStarted"
+
+        binding.buttonGetStarted.setOnClickListener {
             navigateToRegistrationActivity()
         }
     }

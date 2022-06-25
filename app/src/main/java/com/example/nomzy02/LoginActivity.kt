@@ -1,11 +1,28 @@
 package com.example.nomzy02
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.nomzy02.databinding.UserLoginBinding
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var binding: UserLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login)
+        binding = UserLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val actionBar = supportActionBar
+        actionBar!!.title = "LoginActivity"
+
+        binding.loginActivityBtn.setOnClickListener {
+            navigateToDashBoardActivity()
+        }
+    }
+    private fun navigateToDashBoardActivity(){
+        val intent = Intent(this, DashBoardActivity::class.java)
+        startActivity(intent)
     }
 }
