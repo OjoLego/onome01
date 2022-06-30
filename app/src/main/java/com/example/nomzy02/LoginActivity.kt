@@ -14,6 +14,11 @@ class LoginActivity : AppCompatActivity() {
         binding = UserLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val email = intent.getStringExtra("email")
+        val pass = intent.getStringExtra("pass")
+        binding.loginActivityEmail.setText(email)
+        binding.loginActivityPassword.setText(pass)
+
         val actionBar = supportActionBar
         actionBar!!.title = "LoginActivity"
 

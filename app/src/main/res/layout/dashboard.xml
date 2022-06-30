@@ -44,7 +44,7 @@
             android:layout_marginRight="64dp"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center_horizontal"
-            android:text="Welcome Nomzy Back!"
+            android:text="Welcome Back Nomzy!"
             android:textColor="#9C000000"
             android:textFontWeight="700"
             android:textSize="21sp"
@@ -67,14 +67,14 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Text Lists"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="20sp"
-            android:textFontWeight="700"
+            android:text="Text Lists"
             android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="20sp"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView8" />
@@ -86,8 +86,10 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/rectangle_7" />
 
 
