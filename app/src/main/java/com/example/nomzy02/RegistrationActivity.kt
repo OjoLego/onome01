@@ -46,7 +46,7 @@ class RegistrationActivity : AppCompatActivity() {
         {return "Required"}
         if(!nameText.matches(".*[a-z].*".toRegex()))
         {
-            return "must be an alphabet"
+            return "must contain lowercase alphabet"
         }
         if(nameText.matches(".*[0-9].*".toRegex()))
         {
@@ -79,8 +79,8 @@ class RegistrationActivity : AppCompatActivity() {
         val confirmPasswordText = binding.tvLayoutConfirmPassword.text.toString()
         if(confirmPasswordText.isEmpty())
         {return "Required"}
-        if(confirmPasswordText.length < 8)
-        { return "Minimum 8 character password" }
+//        if(confirmPasswordText.length < 8)
+//        { return "Minimum 8 character password" }
         return null
     }
     private fun validPasswordAndConfirmPassword(): String? {
@@ -88,8 +88,8 @@ class RegistrationActivity : AppCompatActivity() {
         val confirmPassword = binding.tvLayoutConfirmPassword.text.toString()
         if(confirmPassword.isEmpty())
         {return "Required"}
-        if(confirmPassword.length < 8)
-        { return "Minimum 8 character password" }
+//        if(confirmPassword.length < 8)
+//        { return "Minimum 8 character password" }
         if (password != confirmPassword){
             return "Password does not match"
         }

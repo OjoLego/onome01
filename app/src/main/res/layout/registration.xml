@@ -43,11 +43,11 @@
         android:layout_marginRight="64dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
         android:text="Welcome On Board!"
         android:textColor="#9C000000"
         android:textFontWeight="600"
         android:textSize="21sp"
-        android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -61,32 +61,34 @@
         android:layout_marginLeft="72dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
         android:text="Let’s help you meet your task"
         android:textColor="#91000000"
         android:textFontWeight="500"
         android:textSize="18sp"
-        android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/etLayoutFullName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etLayoutFullName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:helperText="@string/Required"
-        app:errorEnabled="true"
-        app:helperTextTextColor="@color/red"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
+        app:errorEnabled="true"
+        app:helperText="@string/Required"
+        app:helperTextTextColor="@color/red"
         app:layout_constraintBottom_toTopOf="@id/etLayoutEmail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -94,29 +96,94 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_rounded"
-            android:hint="Enter Your Full Name"
             android:fontFamily="@font/poppins_regular"
-            android:textColor="#000000"
-            android:textSize="16sp"
             android:gravity="center_vertical"
-            android:inputType="text" />
+            android:hint="Enter Your Full Name"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etLayoutEmail"
+        android:id="@+id/etLayoutEnterPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:helperText="@string/Required"
-        app:errorEnabled="true"
-        app:helperTextTextColor="@color/red"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
+        app:errorEnabled="true"
+        app:helperText="@string/Required"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/etLayoutConfirmPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvLayoutEnterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etLayoutConfirmPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        app:errorEnabled="true"
+        app:helperText="@string/Required"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/buttonRegistration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvLayoutConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etLayoutEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="36dp"
+        app:errorEnabled="true"
+        app:helperText="@string/Required"
+        app:helperTextTextColor="@color/red"
         app:layout_constraintBottom_toTopOf="@id/etLayoutEnterPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -124,74 +191,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_rounded"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
             android:hint="Enter Your Email"
-            android:fontFamily="@font/poppins_regular"
+            android:inputType="textEmailAddress"
             android:textColor="#000000"
-            android:textSize="16sp"
-            android:gravity="center_vertical"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etLayoutEnterPassword"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:passwordToggleEnabled="true"
-        app:helperText="@string/Required"
-        app:errorEnabled="true"
-        app:helperTextTextColor="@color/red"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@id/etLayoutConfirmPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvLayoutEnterPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded"
-            android:hint="Enter Password"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:gravity="center_vertical"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etLayoutConfirmPassword"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:passwordToggleEnabled="true"
-        app:helperText="@string/Required"
-        app:errorEnabled="true"
-        app:helperTextTextColor="@color/red"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@id/buttonRegistration"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvLayoutConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded"
-            android:hint="Confirm Password"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:gravity="center_vertical"
-            android:inputType="textPassword" />
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
